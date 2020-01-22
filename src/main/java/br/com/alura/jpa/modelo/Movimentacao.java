@@ -26,6 +26,16 @@ public class Movimentacao {
 	private BigDecimal valor;
 	@ManyToOne
 	private Conta conta;
+	@OneToMany
+	private List<Categoria> categorias = new ArrayList<>();
+	
+	public List<Categoria> getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(List<Categoria> categorias) {
+		this.categorias = categorias;
+	}
 
 	public Conta getConta() {
 		return conta;
